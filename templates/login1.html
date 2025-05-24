@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Full page styling */
+        body {
+            background-image: url('images/3.jpg');
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Container for login box */
+        .login-container {
+            width: 600px;
+            padding: 20px;
+            margin-top: 15%;
+            margin-left: 5%;
+             background: rgba(255,255,255,0.7);
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgb(166 166 166 / 50%);
+        }
+
+        /* Login box elements */
+        h2 {
+            color: #000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            color: #131313;
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            background: #ECECEC;
+            color: #000;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #5243D3;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5d56a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>
+            <img src="images/logo.svg">
+            <br>
+            Login
+        </h2>
+        <form action="#" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Login" onclick="auth()">
+        </form>
+    </div>
+    <script>
+        function auth()
+        {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+//conditionally 
+
+if(username=='Pratiksha' && password=='abc@2024')
+{
+    window.location.assign('http://127.0.0.1:5000');
+    alert('Login Successfull');
+}
+else
+{
+    alert('Invalid information!!');
+    return;
+}
+
+        }
+    </script>
+    <!-- <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the form from submitting
+            window.location.href = 'http://127.0.0.1:5000'//'matchresume.html'; // Redirect to matchresume.html
+        });
+    </script> -->
+</body>
+</html>
